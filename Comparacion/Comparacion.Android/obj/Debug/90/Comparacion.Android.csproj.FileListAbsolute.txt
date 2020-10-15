@@ -499,3 +499,7 @@ C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Deb
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\flata\73549D76FACB44EA.flata
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\flata\63452053ADCB300A.flata
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\flata\4BDF427887273F8E.flata
+C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\res\drawable\createwhite.png
+C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\res\drawable\deletewhite.png
+C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\res\drawable\readwhite.png
+C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion.Android\obj\Debug\90\res\drawable\updatewhite.png

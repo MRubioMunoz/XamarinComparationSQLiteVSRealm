@@ -11,13 +11,29 @@
         <viewmodels:DeleteViewModel/>
         </ContentPage.BindingContext>
 
-        <ContentPage.Content>
-            <StackLayout>
-                <Button Text="Borrar Todo" Command="{Binding DeleteDates}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="REALM" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding TiempoRealm}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="SQLite" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding TiempoSQLite}" HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
-        </ContentPage.Content>
+    <Grid BackgroundColor="#14063A">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="deleteWhite.png" Aspect="AspectFit" Grid.Column="1" Grid.Row="0"/>
+        
+        <Label Text="REALM" HorizontalOptions="CenterAndExpand" FontSize="Title" VerticalOptions="CenterAndExpand" TextColor="#D1686D" Grid.Column="0" Grid.Row="2"/>
+        <Label Text="{Binding TiempoRealm}" HorizontalOptions="CenterAndExpand" FontSize="Title" VerticalOptions="Center" TextColor="#A7383E" Grid.Column="0" Grid.Row="3"/>
+        <Label Text="VS" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="#540004" VerticalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="3"/>
+        <Label Text="SQLite" HorizontalOptions="CenterAndExpand" FontSize="Title" VerticalOptions="CenterAndExpand" TextColor="#4F9F64"  Grid.Column="2" Grid.Row="2"/>
+        <Label Text="{Binding TiempoSQLite}" HorizontalOptions="CenterAndExpand" FontSize="Title" VerticalOptions="Center" TextColor="#2A7F40" Grid.Column="2" Grid.Row="3"/>
+        <Button Text="DELETE" Command="{Binding DeleteDates}" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Large" Grid.Column="1" Grid.Row="4" TextColor="#897BAF"  BackgroundColor="#14063A" VerticalOptions="CenterAndExpand"/>
+    </Grid>
 </ContentPage>
