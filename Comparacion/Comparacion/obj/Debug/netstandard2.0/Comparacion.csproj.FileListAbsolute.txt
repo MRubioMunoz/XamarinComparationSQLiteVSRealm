@@ -1,6 +1,5 @@
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\bin\Debug\netstandard2.0\Comparacion.deps.json
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\bin\Debug\netstandard2.0\Comparacion.dll
-C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.csprojAssemblyReference.cache
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.AssemblyInfoInputs.cache
@@ -16,3 +15,4 @@ C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netst
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.dll
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\ref\Comparacion.dll
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.pdb
+C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.csprojAssemblyReference.cache

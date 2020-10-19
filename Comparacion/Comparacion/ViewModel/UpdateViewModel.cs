@@ -32,8 +32,29 @@ namespace Comparacion.ViewModel
             OnPropertyChanged("");
         }
     }
+        private Color colorRealm = Color.White;
+        public Color ColorRealm
+        {
+            get => colorRealm;
+            set
+            {
+                colorRealm = value;
+                OnPropertyChanged("");
+            }
+        }
 
-    public UpdateViewModel()
+        private Color colorSQLite = Color.White;
+        public Color ColorSQLite
+        {
+            get => colorSQLite;
+            set
+            {
+                colorSQLite = value;
+                OnPropertyChanged("");
+            }
+        }
+
+        public UpdateViewModel()
     {
         SQLiteRepository = new SQLiteRepository("MySQLite.db3");
         realmRepository = new RealmRepository();
@@ -50,9 +71,24 @@ namespace Comparacion.ViewModel
 
                 TiempoRealm = Tiempos.watchRealmUpdate;
                 TiempoSQLite = Tiempos.watchSQLiteUpdate;
+                this.cambiarColores();
+
             });
+            }
+        }
+
+        public void cambiarColores()
+        {
+            if (TiempoRealm < TiempoSQLite)
+            {
+                ColorRealm = Tiempos.lentoColor;
+                ColorSQLite = Tiempos.rapidoColor;
+            }
+            else
+            {
+                ColorRealm = Tiempos.rapidoColor;
+                ColorSQLite = Tiempos.lentoColor;
+            }
         }
     }
 }
-}
-

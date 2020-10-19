@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comparacion.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,10 @@ namespace Comparacion.View
         public ReadAllView()
         {
             InitializeComponent();
+        }
+
+        private void Compare(object sender, EventArgs e)
+        {
         }
     }
 }
