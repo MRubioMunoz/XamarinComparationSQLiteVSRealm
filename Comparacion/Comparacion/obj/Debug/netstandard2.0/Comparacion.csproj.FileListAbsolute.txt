@@ -15,4 +15,3 @@ C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netst
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.dll
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\ref\Comparacion.dll
 C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.pdb
-C:\Users\Miguel\source\repos\Comparacion\Comparacion\Comparacion\obj\Debug\netstandard2.0\Comparacion.csprojAssemblyReference.cache

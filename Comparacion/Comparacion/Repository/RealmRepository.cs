@@ -26,7 +26,6 @@ namespace Comparacion.Repository
             Tiempos.watchRealmReadAll = watchRealm.ElapsedMilliseconds;
             return list;
 
-            // return this.connection.All<ObjetoRealm>().ToList();
         }
 
         public void CreateObjectRealm()
@@ -41,13 +40,11 @@ namespace Comparacion.Repository
             transaction.Commit();
             watchRealm.Stop();
             Tiempos.watchRealmCreate = watchRealm.ElapsedMilliseconds;
-            //  Console.WriteLine(Tiempos.watchRealmCreate.ToString());
         }
 
         public ObjetoRealmN GetOneObjectRealm(int id)
         {
-            List<ObjetoRealmN> list = this.GetAllObjectRealm();
-            return list.FirstOrDefault<ObjetoRealmN>(i => i.id == id);
+            return GetAllObjectRealm().FirstOrDefault(i => i.id == id);
         }
 
         public void DeleteObjectRealm(int id)
@@ -64,6 +61,8 @@ namespace Comparacion.Repository
             }
         }
 
+        //STOPWATCH PONEEER
+
         public void DeleteAllObjectRealm()
         {
             Stopwatch watchRealm = Stopwatch.StartNew();
@@ -72,6 +71,7 @@ namespace Comparacion.Repository
                 this.connection.RemoveAll();
                 trans.Commit();
             }
+            watchRealm.Stop();
             Tiempos.watchRealmDelete = watchRealm.ElapsedMilliseconds;
         }
 
@@ -89,6 +89,7 @@ namespace Comparacion.Repository
                 }
                 transaction.Commit();
             }
+            watchRealm.Stop();
             Tiempos.watchRealmUpdate = watchRealm.ElapsedMilliseconds;
         }
     }
