@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Realms;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +16,9 @@ namespace Comparacion
 
         protected override void OnStart()
         {
+            //Cambiar modelo Realm
+            var con = RealmConfiguration.DefaultConfiguration;
+            con.SchemaVersion = 3;
         }
 
         protected override void OnSleep()
