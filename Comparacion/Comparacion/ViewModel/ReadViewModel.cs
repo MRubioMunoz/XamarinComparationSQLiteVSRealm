@@ -36,6 +36,30 @@ namespace Comparacion.ViewModel
             }
         }
 
+        //Color ganador #60C967
+        //Color perdedor #A350A6
+
+        private Color colorRealm = Color.White;
+        public Color ColorRealm
+        {
+            get => colorRealm;
+            set
+            {
+                colorRealm = value;
+                OnPropertyChanged("");
+            }
+        }
+
+        private Color colorSQLite = Color.White;
+        public Color ColorSQLite {
+            get => colorSQLite;
+            set
+            {
+                colorSQLite = value;
+                OnPropertyChanged("");
+            }
+        }
+
         private long tiempoRealm = Tiempos.watchRealmReadAll;
         public long TiempoRealm
         {
@@ -74,7 +98,24 @@ namespace Comparacion.ViewModel
 
                     TiempoRealm = Tiempos.watchRealmReadAll;
                     TiempoSQLite = Tiempos.watchSQLiteReadAll;
+
+                   this.cambiarColores();
+
                 });
+            }
+        }
+
+        public void cambiarColores() 
+        {
+            if( TiempoRealm < TiempoSQLite)
+            {
+                ColorRealm = Tiempos.lentoColor;
+                ColorSQLite = Tiempos.rapidoColor;
+            }
+            else
+            {
+                ColorRealm = Tiempos.rapidoColor;
+                ColorSQLite = Tiempos.lentoColor;
             }
         }
     }

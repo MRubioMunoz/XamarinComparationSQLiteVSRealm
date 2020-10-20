@@ -11,13 +11,31 @@
         <viewmodels:UpdateViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Update Todo" Command="{Binding UpdateDates}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="REALM" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding TiempoRealm}" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="SQLite" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="{Binding TiempoSQLite}" HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid BackgroundColor="#000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="updateWhite.png" Aspect="AspectFit" Grid.Column="1" Grid.Row="0"/>
+
+        <Label Text="REALM" HorizontalOptions="CenterAndExpand" FontSize="35" VerticalOptions="CenterAndExpand" TextColor="{Binding ColorRealm}" Grid.Column="0" Grid.Row="2"/>
+        <Label Text="{Binding TiempoRealm}" HorizontalOptions="CenterAndExpand" FontSize="35" VerticalOptions="Center" TextColor="{Binding ColorRealm}" Grid.Column="0" Grid.Row="3"/>
+      
+        <Label Text="VS" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" FontSize="35" TextColor="#ABBAFF" VerticalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="3"/>
+
+        <Label Text="SQLite" HorizontalOptions="CenterAndExpand" FontSize="35" VerticalOptions="CenterAndExpand" TextColor="{Binding ColorSQLite}"  Grid.Column="2" Grid.Row="2"/>
+        <Label Text="{Binding TiempoSQLite}" HorizontalOptions="CenterAndExpand" FontSize="45" VerticalOptions="Center" TextColor="{Binding ColorSQLite}" Grid.Column="2" Grid.Row="3"/>
+        
+        <Button Text="UPDATE" Command="{Binding UpdateDates}" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="29" Grid.Column="1" Grid.Row="4" TextColor="#ABBAFF" BackgroundColor="#000000" VerticalOptions="Center"/>
+   
+    </Grid>
 </ContentPage>

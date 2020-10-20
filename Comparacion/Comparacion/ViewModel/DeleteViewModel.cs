@@ -33,6 +33,28 @@ namespace Comparacion.ViewModel
             }
         }
 
+        private Color colorRealm = Color.White;
+        public Color ColorRealm
+        {
+            get => colorRealm;
+            set
+            {
+                colorRealm = value;
+                OnPropertyChanged("");
+            }
+        }
+
+        private Color colorSQLite = Color.White;
+        public Color ColorSQLite
+        {
+            get => colorSQLite;
+            set
+            {
+                colorSQLite = value;
+                OnPropertyChanged("");
+            }
+        }
+
         public DeleteViewModel()
         {
             SQLiteRepository = new SQLiteRepository("MySQLite.db3");
@@ -50,7 +72,23 @@ namespace Comparacion.ViewModel
 
                     TiempoRealm = Tiempos.watchRealmDelete;
                     TiempoSQLite = Tiempos.watchSQLiteDelete;
+                    this.cambiarColores();
+
                 });
+            }
+        }
+
+        public void cambiarColores()
+        {
+            if (TiempoRealm < TiempoSQLite)
+            {
+                ColorRealm = Tiempos.lentoColor;
+                ColorSQLite = Tiempos.rapidoColor;
+            }
+            else
+            {
+                ColorRealm = Tiempos.rapidoColor;
+                ColorSQLite = Tiempos.lentoColor;
             }
         }
     }

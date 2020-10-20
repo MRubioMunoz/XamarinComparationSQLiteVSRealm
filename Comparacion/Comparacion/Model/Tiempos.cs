@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace Comparacion.Model
 {
@@ -17,5 +18,8 @@ namespace Comparacion.Model
 
         public static long watchRealmReadAll;
         public static long watchSQLiteReadAll;
+        
+        public static Color rapidoColor = Color.FromHex("A350A6");
+        public static Color lentoColor = Color.FromHex("60C967");
     }
 }

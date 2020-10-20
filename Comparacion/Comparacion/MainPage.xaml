@@ -6,23 +6,34 @@
              mc:Ignorable="d"
              x:Class="Comparacion.MainPage">
 
-    <StackLayout>
-        <Label Text="Aplicacion de comparacion de Realm y SQLite" HorizontalOptions="Center" FontSize="Title"/>
+    <Grid BackgroundColor="#000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".35*" />
+            <RowDefinition Height=".7*"/>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".7*"/>
+            <RowDefinition Height=".3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-        <Frame>
-            <Button Text="Create"  x:Name="CambioCreate"/>
-        </Frame>
-        <Frame>
-            <Button Text="Read"  x:Name="CambioRead"/>
-        </Frame>
 
-        <Frame>
-            <Button Text="Delete"  x:Name="CambioDelete"/>
-        </Frame>
-        <Frame>
-            <Button Text="Update"  x:Name="CambioUpdate"/>
-        </Frame>
 
-    </StackLayout>
+        <Label Text="REALM VS SQLITE" HorizontalOptions="Center" FontSize="35" Grid.Row="0" Grid.ColumnSpan="2" TextColor="#ABBAFF"/>
 
+        <ImageButton Source="createWhite.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#000000" x:Name="CambioCreate" Grid.Column="0" Grid.Row="1"/>
+        <Label Text="Create" HorizontalOptions="Center" FontSize="30" Grid.Row="2" Grid.Column="0" TextColor="White"/>
+
+        <ImageButton Source="readWhite.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#000000" x:Name="CambioRead" Grid.Column="1" Grid.Row="1"/>
+        <Label Text="Read" HorizontalOptions="Center" FontSize="30" Grid.Row="2" Grid.Column="1" TextColor="White"/>
+
+        <ImageButton Source="deleteWhite.png"  Aspect="AspectFit" WidthRequest="200" HeightRequest="200" VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#000000" x:Name="CambioDelete" Grid.Column="0" Grid.Row="3"/>
+        <Label Text="Delete" HorizontalOptions="Center" FontSize="30" Grid.Row="4" Grid.Column="0" TextColor="White"/>
+
+        <ImageButton Source="updateWhite.png"  Aspect="AspectFit" WidthRequest="200" HeightRequest="200" VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#000000" x:Name="CambioUpdate" Grid.Column="1" Grid.Row="3"/>
+        <Label Text="Update" HorizontalOptions="Center" FontSize="30" Grid.Row="4" Grid.Column="1" TextColor="White"/>
+
+    </Grid>
 </ContentPage>
